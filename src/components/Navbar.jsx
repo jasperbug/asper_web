@@ -38,17 +38,10 @@ const Navbar = () => {
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
         height: 64,
       }}>
-        <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}>
-          <div style={{
-            width: 32, height: 32, borderRadius: 8,
-            background: 'linear-gradient(135deg, #4285F4, #34A853)',
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-            fontFamily: 'var(--font-mono)', fontWeight: 700, fontSize: 14, color: '#fff',
-          }}>A</div>
-          <span style={{
-            fontFamily: 'var(--font-mono)', fontWeight: 600, fontSize: '1.1rem',
-            color: '#fff', letterSpacing: '-0.02em',
-          }}>ASPER</span>
+        <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+          <img src="/logo.png" alt="Asper International" style={{
+            height: 36, width: 'auto', objectFit: 'contain',
+          }} />
         </Link>
 
         <div style={{

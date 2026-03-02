@@ -17,16 +17,10 @@ const Footer = () => {
           gap: 48, marginBottom: 48,
         }}>
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
-              <div style={{
-                width: 32, height: 32, borderRadius: 8,
-                background: 'linear-gradient(135deg, #4285F4, #34A853)',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                fontFamily: 'var(--font-mono)', fontWeight: 700, fontSize: 14, color: '#fff',
-              }}>A</div>
-              <span style={{ fontFamily: 'var(--font-mono)', fontWeight: 600, color: '#fff' }}>
-                {t('footer.company')}
-              </span>
+            <div style={{ display: 'flex', alignItems: 'center', marginBottom: 16 }}>
+              <img src="/logo.png" alt="Asper International" style={{
+                height: 32, width: 'auto', objectFit: 'contain',
+              }} />
             </div>
             <p style={{ color: '#64748B', fontSize: '0.875rem', lineHeight: 1.7 }}>
               {t('footer.companyDesc')}
