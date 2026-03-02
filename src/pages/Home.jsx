@@ -95,9 +95,9 @@ const Home = () => {
   const { t } = useTranslation();
 
   const features = [
-    { icon: Database, title: t('nav.aiVision'), desc: '100M+ AI-labeled images', path: '/ai-vision', color: '#4285F4' },
-    { icon: Cpu, title: t('nav.nexus'), desc: 'Carbon tracking OS', path: '/nexus', color: '#34A853' },
-    { icon: Link2, title: t('nav.supply'), desc: 'Digital material passports', path: '/supply-chain', color: '#4285F4' },
+    { icon: Database, title: t('nav.aiVision'), desc: t('home.feat1Desc'), path: '/ai-vision', color: '#4285F4' },
+    { icon: Cpu, title: t('nav.nexus'), desc: t('home.feat2Desc'), path: '/nexus', color: '#34A853' },
+    { icon: Link2, title: t('nav.supply'), desc: t('home.feat3Desc'), path: '/supply-chain', color: '#4285F4' },
   ];
 
   return (
@@ -109,7 +109,7 @@ const Home = () => {
       }}>
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <div style={{ maxWidth: 800 }}>
-            <div className="tag" style={{ marginBottom: 24 }}>Global Environmental Data Infrastructure</div>
+            <div className="tag" style={{ marginBottom: 24 }}>{t('home.tag')}</div>
             <h1 style={{
               fontSize: 'clamp(2.5rem, 5vw, 4rem)', lineHeight: 1.1,
               marginBottom: 24, fontWeight: 700,
@@ -162,10 +162,10 @@ const Home = () => {
         <div className="container">
           <div className="grid-4">
             {[
-              { icon: Database, value: 100, suffix: 'M+', label: 'Labeled Images', color: '#4285F4', delay: 0 },
-              { icon: Brain, value: 99.7, suffix: '%', label: 'Model Accuracy', color: '#34A853', delay: 150 },
-              { icon: Activity, value: 12, suffix: 'B+', label: 'Data Points Processed', color: '#4285F4', delay: 300 },
-              { icon: Globe, value: 47, suffix: '+', label: 'Countries Deployed', color: '#34A853', delay: 450 },
+              { icon: Database, value: 100, suffix: 'M+', label: t('home.labeledImages'), color: '#4285F4', delay: 0 },
+              { icon: Brain, value: 99.7, suffix: '%', label: t('home.modelAccuracy'), color: '#34A853', delay: 150 },
+              { icon: Activity, value: 12, suffix: 'B+', label: t('home.dataPoints'), color: '#4285F4', delay: 300 },
+              { icon: Globe, value: 47, suffix: '+', label: t('home.countries'), color: '#34A853', delay: 450 },
             ].map((stat, i) => (
               <div key={i} className="card" style={{ textAlign: 'center', padding: '28px 20px' }}>
                 <stat.icon size={28} color={stat.color} style={{ marginBottom: 14 }} />
@@ -185,19 +185,19 @@ const Home = () => {
           <div className="infra-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'center' }}>
             {/* Left: Text */}
             <div>
-              <div className="tag" style={{ marginBottom: 20 }}>Platform</div>
-              <h2 className="section-title" style={{ marginBottom: 16 }}>Infrastructure at Scale</h2>
+              <div className="tag" style={{ marginBottom: 20 }}>{t('home.platformTag')}</div>
+              <h2 className="section-title" style={{ marginBottom: 16 }}>{t('home.infraTitle')}</h2>
               <p style={{
                 fontSize: '1rem', color: '#94A3B8', lineHeight: 1.8, marginBottom: 32,
               }}>
-                Processing billions of data points across global recycling and decarbonization networks. Our distributed platform powers real-time decision making at every node.
+                {t('home.infraDesc')}
               </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                 {[
-                  { icon: Brain, text: 'AI-Powered Material Classification', color: '#4285F4' },
-                  { icon: Activity, text: 'Real-time Carbon Tracking', color: '#34A853' },
-                  { icon: Shield, text: 'Blockchain-Verified Supply Chain', color: '#4285F4' },
-                  { icon: Globe, text: 'Edge Computing Deployment', color: '#34A853' },
+                  { icon: Brain, text: t('home.infraAI'), color: '#4285F4' },
+                  { icon: Activity, text: t('home.infraCarbon'), color: '#34A853' },
+                  { icon: Shield, text: t('home.infraBlockchain'), color: '#4285F4' },
+                  { icon: Globe, text: t('home.infraEdge'), color: '#34A853' },
                 ].map((item, i) => (
                   <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
                     <div style={{

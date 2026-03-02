@@ -47,7 +47,7 @@ const AIVision = () => {
       <section className="section">
         <div className="container">
           {/* Hero */}
-          <div className="tag" style={{ marginBottom: 24 }}>AI & Machine Learning</div>
+          <div className="tag" style={{ marginBottom: 24 }}>{t('aiVision.tag')}</div>
           <h1 className="section-title" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)' }}>
             {t('aiVision.title')}
           </h1>
@@ -59,7 +59,7 @@ const AIVision = () => {
               { icon: Database, end: 100, suffix: 'M+', label: t('aiVision.images'), color: '#4285F4', delay: 0 },
               { icon: Layers, end: 8.5, suffix: 'B+', label: t('aiVision.spectral'), color: '#34A853', delay: 150 },
               { icon: Brain, end: 99.7, suffix: '%', label: t('aiVision.accuracy'), color: '#4285F4', delay: 300 },
-              { icon: Zap, end: 847, suffix: '', label: 'Active Models', color: '#34A853', delay: 450 },
+              { icon: Zap, end: 847, suffix: '', label: t('aiVision.activeModels'), color: '#34A853', delay: 450 },
             ].map((m, i) => (
               <div key={i} className="card" style={{ textAlign: 'center', padding: '28px 20px' }}>
                 <m.icon size={28} color={m.color} style={{ marginBottom: 14 }} />
@@ -75,7 +75,7 @@ const AIVision = () => {
           <div style={{ marginBottom: 80 }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24 }}>
               <h2 style={{ fontSize: '1.3rem', color: '#fff', margin: 0 }}>
-                Real-Time Classification
+                {t('aiVision.realtimeTitle')}
               </h2>
               <span style={{
                 fontFamily: 'var(--font-mono)', fontSize: '0.65rem',
@@ -85,7 +85,7 @@ const AIVision = () => {
                   width: 7, height: 7, borderRadius: '50%', background: '#34A853',
                   display: 'inline-block', animation: 'pulse 2s infinite',
                 }} />
-                LIVE — {gridRows.length} streams
+                {t('aiVision.liveStreams', { count: gridRows.length })}
               </span>
             </div>
 
@@ -154,7 +154,7 @@ const AIVision = () => {
           {/* 3. Classification Accuracy Chart (Recharts) */}
           <div style={{ marginBottom: 80 }}>
             <h2 style={{ fontSize: '1.3rem', marginBottom: 24, color: '#fff' }}>
-              {t('aiVision.categories')} — Accuracy Distribution
+              {t('aiVision.categories')} — {t('aiVision.accuracyDist')}
             </h2>
             <div style={{
               background: '#0a0a0a', border: '1px solid #1a1a1a',
@@ -171,7 +171,7 @@ const AIVision = () => {
                       borderRadius: 8, fontFamily: 'var(--font-mono)', fontSize: '0.8rem',
                     }}
                     labelStyle={{ color: '#fff' }}
-                    formatter={(val) => [`${val}%`, 'Accuracy']}
+                    formatter={(val) => [`${val}%`, t('aiVision.accuracyLabel')]}
                   />
                   <Bar dataKey="accuracy" radius={[6, 6, 0, 0]}>
                     {classificationData.map((entry, i) => (
@@ -292,18 +292,18 @@ const AIVision = () => {
           }}>
             <div>
               <h3 style={{ fontSize: '1.2rem', color: '#fff', marginBottom: 8 }}>
-                Ready to integrate?
+                {t('aiVision.ctaTitle')}
               </h3>
               <p style={{ fontSize: '0.9rem', color: '#64748B' }}>
-                Explore our carbon tracking platform or connect via API.
+                {t('aiVision.ctaDesc')}
               </p>
             </div>
             <div style={{ display: 'flex', gap: 12 }}>
               <Link to="/nexus" className="btn-primary">
-                Explore Nexus OS <ArrowRight size={16} />
+                {t('aiVision.ctaBtn1')} <ArrowRight size={16} />
               </Link>
               <Link to="/partners" className="btn-outline">
-                API Access <ArrowRight size={16} />
+                {t('aiVision.ctaBtn2')} <ArrowRight size={16} />
               </Link>
             </div>
           </div>

@@ -68,7 +68,7 @@ const CarbonFiberRecovery = () => {
         <div className="container">
 
           {/* ── 1. Hero ── */}
-          <div className="tag" style={{ marginBottom: 24 }}>Carbon Fiber Recovery</div>
+          <div className="tag" style={{ marginBottom: 24 }}>{t('metal.tag')}</div>
           <h1 className="section-title" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)' }}>
             {t('metal.title')}
           </h1>
@@ -112,7 +112,7 @@ const CarbonFiberRecovery = () => {
           <div style={{ marginBottom: 80 }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24 }}>
               <h2 style={{ fontSize: '1.3rem', color: '#fff', margin: 0 }}>
-                Mechanical Property Retention by Grade
+                {t('metal.chartTitle')}
               </h2>
               <span style={{
                 fontFamily: 'var(--font-mono)', fontSize: '0.65rem',
@@ -122,7 +122,7 @@ const CarbonFiberRecovery = () => {
                   width: 7, height: 7, borderRadius: '50%', background: '#4285F4',
                   display: 'inline-block', animation: 'pulse 2s infinite',
                 }} />
-                Latest batch results
+                {t('metal.latestBatch')}
               </span>
             </div>
 
@@ -141,7 +141,7 @@ const CarbonFiberRecovery = () => {
                       borderRadius: 8, fontFamily: 'var(--font-mono)', fontSize: '0.8rem',
                     }}
                     labelStyle={{ color: '#fff' }}
-                    formatter={(val) => [`${val}%`, 'Property Retention']}
+                    formatter={(val) => [`${val}%`, t('metal.retentionLabel')]}
                   />
                   <Bar dataKey="retention" radius={[6, 6, 0, 0]}>
                     {gradeData.map((entry, i) => (
@@ -192,18 +192,18 @@ const CarbonFiberRecovery = () => {
           }}>
             <div>
               <h3 style={{ fontSize: '1.2rem', color: '#fff', marginBottom: 8 }}>
-                Reclaim high-value carbon fiber
+                {t('metal.ctaTitle')}
               </h3>
               <p style={{ fontSize: '0.9rem', color: '#64748B' }}>
-                Connect your composite waste streams to our precision recovery network.
+                {t('metal.ctaDesc')}
               </p>
             </div>
             <div style={{ display: 'flex', gap: 12 }}>
               <Link to="/supply-chain" className="btn-primary">
-                Supply Chain <ArrowRight size={16} />
+                {t('metal.ctaBtn1')} <ArrowRight size={16} />
               </Link>
               <Link to="/partners" className="btn-outline">
-                Partner Portal <ArrowRight size={16} />
+                {t('metal.ctaBtn2')} <ArrowRight size={16} />
               </Link>
             </div>
           </div>

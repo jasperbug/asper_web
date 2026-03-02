@@ -90,16 +90,18 @@ const ParticleBackground = () => {
       mouse.y = e.clientY;
     };
 
+    const handleResize = () => { resize(); init(); };
+
     resize();
     init();
     animate();
 
-    window.addEventListener('resize', () => { resize(); init(); });
+    window.addEventListener('resize', handleResize);
     window.addEventListener('mousemove', handleMouse);
 
     return () => {
       cancelAnimationFrame(animationId);
-      window.removeEventListener('resize', resize);
+      window.removeEventListener('resize', handleResize);
       window.removeEventListener('mousemove', handleMouse);
     };
   }, []);

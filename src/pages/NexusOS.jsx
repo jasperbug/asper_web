@@ -57,7 +57,7 @@ const NexusOS = () => {
         <div className="container">
 
           {/* ── 1. Hero ── */}
-          <div className="tag" style={{ marginBottom: 24 }}>Operating System</div>
+          <div className="tag" style={{ marginBottom: 24 }}>{t('nexus.tag')}</div>
           <h1 className="section-title" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)' }}>
             {t('nexus.title')}
           </h1>
@@ -95,7 +95,7 @@ const NexusOS = () => {
                   width: 7, height: 7, borderRadius: '50%', background: '#34A853',
                   display: 'inline-block', animation: 'pulse 2s infinite',
                 }} />
-                LIVE — 12-month window
+                {t('nexus.liveWindow')}
               </span>
             </div>
 
@@ -132,7 +132,7 @@ const NexusOS = () => {
                       borderRadius: 8, fontFamily: 'var(--font-mono)', fontSize: '0.8rem',
                     }}
                     labelStyle={{ color: '#fff' }}
-                    formatter={(val, name) => [`${val}%`, name === 'reduction' ? 'CO₂ Reduction' : 'Target']}
+                    formatter={(val, name) => [`${val}%`, name === 'reduction' ? t('nexus.co2Label') : t('nexus.targetLabel')]}
                   />
                   <Area type="monotone" dataKey="reduction" stroke="#34A853" fill="url(#colorReduction)" strokeWidth={2} />
                   <Line type="monotone" dataKey="target" stroke="#4285F4" strokeDasharray="5 5" strokeWidth={1} dot={false} />
@@ -147,13 +147,13 @@ const NexusOS = () => {
                 <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                   <div style={{ width: 12, height: 3, background: '#34A853', borderRadius: 2 }} />
                   <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.65rem', color: '#64748B' }}>
-                    Actual CO₂ Reduction
+                    {t('nexus.actualReduction')}
                   </span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                   <div style={{ width: 12, height: 3, background: '#4285F4', borderRadius: 2, borderStyle: 'dashed' }} />
                   <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.65rem', color: '#64748B' }}>
-                    Target Trajectory
+                    {t('nexus.targetTrajectory')}
                   </span>
                 </div>
               </div>
@@ -164,7 +164,7 @@ const NexusOS = () => {
           <div style={{ marginBottom: 80 }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24 }}>
               <h2 style={{ fontSize: '1.3rem', color: '#fff', margin: 0 }}>
-                Facility Monitoring
+                {t('nexus.facilityTitle')}
               </h2>
               <span style={{
                 fontFamily: 'var(--font-mono)', fontSize: '0.65rem',
@@ -174,7 +174,7 @@ const NexusOS = () => {
                   width: 7, height: 7, borderRadius: '50%', background: '#34A853',
                   display: 'inline-block', animation: 'pulse 2s infinite',
                 }} />
-                LIVE — {monitorRows.length} facilities
+                {t('nexus.liveFacilities', { count: monitorRows.length })}
               </span>
             </div>
 
@@ -261,10 +261,10 @@ const NexusOS = () => {
             <div className="card">
               <Server size={28} color="#4285F4" style={{ marginBottom: 16 }} />
               <h3 style={{ fontSize: '1.1rem', marginBottom: 12, color: '#fff' }}>
-                Edge Computing Architecture
+                {t('nexus.edgeTitle')}
               </h3>
               <p style={{ fontSize: '0.85rem', color: '#64748B', lineHeight: 1.7, marginBottom: 20 }}>
-                Distributed edge nodes process sensor data in real-time, reducing latency to sub-100ms for critical carbon accounting decisions.
+                {t('nexus.edgeDesc')}
               </p>
 
               {/* Tags */}
@@ -300,10 +300,10 @@ const NexusOS = () => {
             <div className="card">
               <Leaf size={28} color="#34A853" style={{ marginBottom: 16 }} />
               <h3 style={{ fontSize: '1.1rem', marginBottom: 12, color: '#fff' }}>
-                Carbon Credit Pipeline
+                {t('nexus.pipelineTitle')}
               </h3>
               <p style={{ fontSize: '0.85rem', color: '#64748B', lineHeight: 1.7, marginBottom: 20 }}>
-                End-to-end pipeline from raw sensor data to verified carbon credits, with blockchain notarization at every stage.
+                {t('nexus.pipelineDesc')}
               </p>
 
               {/* 5-step pipeline */}
@@ -403,18 +403,18 @@ const NexusOS = () => {
           }}>
             <div>
               <h3 style={{ fontSize: '1.2rem', color: '#fff', marginBottom: 8 }}>
-                Track your carbon footprint
+                {t('nexus.ctaTitle')}
               </h3>
               <p style={{ fontSize: '0.9rem', color: '#64748B' }}>
-                Connect your facilities to the Nexus network and start generating verified carbon credits.
+                {t('nexus.ctaDesc')}
               </p>
             </div>
             <div style={{ display: 'flex', gap: 12 }}>
               <Link to="/supply-chain" className="btn-primary">
-                Supply Chain <ArrowRight size={16} />
+                {t('nexus.ctaBtn1')} <ArrowRight size={16} />
               </Link>
               <Link to="/partners" className="btn-outline">
-                Partner Portal <ArrowRight size={16} />
+                {t('nexus.ctaBtn2')} <ArrowRight size={16} />
               </Link>
             </div>
           </div>

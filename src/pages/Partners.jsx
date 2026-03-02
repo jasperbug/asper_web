@@ -25,7 +25,7 @@ const Partners = () => {
     <div style={{ paddingTop: 64 }}>
       <section className="section">
         <div className="container">
-          <div className="tag" style={{ marginBottom: 24 }}>Ecosystem</div>
+          <div className="tag" style={{ marginBottom: 24 }}>{t('partners.tag')}</div>
           <h1 className="section-title" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)' }}>
             {t('partners.title')}
           </h1>
