@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Database, Cpu, Leaf, Link2, Brain, Activity, Shield, Globe } from 'lucide-react';
 import AnimatedCounter from '../components/AnimatedCounter';
+import VideoHero from '../components/VideoHero';
 
 // 數據格子視覺化元件
 const DataGridVis = () => {
@@ -102,12 +103,9 @@ const Home = () => {
 
   return (
     <div>
-      {/* Hero */}
-      <section style={{
-        minHeight: '100vh', display: 'flex', alignItems: 'center',
-        position: 'relative', paddingTop: 64,
-      }}>
-        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+      {/* Hero with Video Background */}
+      <VideoHero>
+        <div className="container">
           <div style={{ maxWidth: 800 }}>
             <div className="tag" style={{ marginBottom: 24 }}>{t('home.tag')}</div>
             <h1 style={{
@@ -121,7 +119,7 @@ const Home = () => {
               }}>{t('hero.headline2')}</span>
             </h1>
             <p style={{
-              fontSize: '1.15rem', color: '#94A3B8', maxWidth: 600,
+              fontSize: '1.15rem', color: 'rgba(255,255,255,0.75)', maxWidth: 600,
               marginBottom: 40, lineHeight: 1.8,
             }}>{t('hero.subtext')}</p>
             <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
@@ -138,7 +136,7 @@ const Home = () => {
           <div style={{
             display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
             gap: 32, marginTop: 100, paddingTop: 48,
-            borderTop: '1px solid rgba(255,255,255,0.05)',
+            borderTop: '1px solid rgba(255,255,255,0.15)',
           }}>
             {[
               { value: 100, suffix: 'M+', label: t('stats.images'), delay: 0 },
@@ -150,12 +148,12 @@ const Home = () => {
                 <div className="metric-value">
                   <AnimatedCounter end={stat.value} suffix={stat.suffix} delay={stat.delay} />
                 </div>
-                <div className="metric-label">{stat.label}</div>
+                <div className="metric-label" style={{ color: 'rgba(255,255,255,0.5)' }}>{stat.label}</div>
               </div>
             ))}
           </div>
         </div>
-      </section>
+      </VideoHero>
 
       {/* Stats Cards */}
       <section className="section" style={{ paddingTop: 60 }}>
