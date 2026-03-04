@@ -237,16 +237,82 @@ a:hover {
   animation: fadeInUp 0.8s ease-out forwards;
 }
 
+/* ═══ Responsive: Tablet (≤1024px) ═══ */
 @media (max-width: 1024px) {
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
   .grid-3 { grid-template-columns: repeat(2, 1fr); }
   .section-title { font-size: 2rem; }
+  .section { padding: 80px 0; }
 }
 
+/* ═══ Responsive: Mobile (≤768px) ═══ */
 @media (max-width: 768px) {
   .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
-  .section { padding: 80px 0; }
-  .section-title { font-size: 1.75rem; }
+  .section { padding: 60px 0; }
+  .section-title { font-size: 1.5rem; }
+  .section-subtitle { font-size: 0.95rem; margin-bottom: 40px; }
   .container { padding: 0 16px; }
-  .infra-grid { grid-template-columns: 1fr !important; }
+  .infra-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+
+  .metric-value { font-size: 2rem; }
+  .card { padding: 24px; }
+
+  .btn-primary, .btn-outline {
+    padding: 12px 24px;
+    font-size: 0.8rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Data tables: horizontal scroll */
+  .data-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* CTA boxes */
+  .cta-box {
+    padding: 32px 20px !important;
+    flex-direction: column !important;
+    text-align: center;
+  }
+  .cta-box .btn-primary, .cta-box .btn-outline {
+    width: auto;
+  }
+
+  /* IoT flow: vertical on mobile */
+  .iot-flow {
+    flex-direction: column !important;
+    gap: 0 !important;
+  }
+  .iot-flow .iot-connector {
+    width: 2px !important;
+    height: 24px !important;
+    margin: 0 auto !important;
+    background: linear-gradient(180deg, #1a1a1a, #4285F4, #1a1a1a) !important;
+  }
+
+  /* Stats row in hero */
+  .hero-stats {
+    margin-top: 48px !important;
+    gap: 20px !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+  /* Footer */
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+/* ═══ Responsive: Small Mobile (≤480px) ═══ */
+@media (max-width: 480px) {
+  .section-title { font-size: 1.3rem; }
+  .metric-value { font-size: 1.75rem; }
+  .tag { font-size: 0.65rem; }
+
+  .hero-stats {
+    grid-template-columns: 1fr 1fr !important;
+  }
 }

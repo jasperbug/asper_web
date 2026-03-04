@@ -69,7 +69,7 @@ const VideoHero = ({ children }) => {
       }} />
 
       {/* Content Overlay */}
-      <div style={{
+      <div className="video-hero-content" style={{
         position: 'relative',
         zIndex: 2,
         width: '100%',
@@ -79,7 +79,7 @@ const VideoHero = ({ children }) => {
       </div>
 
       {/* Scroll Indicator */}
-      <div style={{
+      <div className="scroll-indicator" style={{
         position: 'absolute',
         bottom: 32,
         left: '50%',
@@ -110,6 +110,10 @@ const VideoHero = ({ children }) => {
         @keyframes scrollBounce {
           0%, 100% { transform: translateX(-50%) translateY(0); }
           50% { transform: translateX(-50%) translateY(8px); }
+        }
+        @media (max-width: 768px) {
+          .video-hero-content { padding-top: 80px !important; padding-bottom: 32px !important; }
+          .scroll-indicator { display: none !important; }
         }
       `}</style>
     </section>

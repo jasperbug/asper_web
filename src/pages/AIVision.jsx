@@ -89,13 +89,13 @@ const AIVision = () => {
               </span>
             </div>
 
-            <div style={{
+            <div className="data-table-wrapper" style={{
               background: '#0a0a0a', border: '1px solid #1a1a1a',
               borderRadius: 12, overflow: 'hidden',
             }}>
               {/* Header */}
               <div style={{
-                display: 'grid', gridTemplateColumns: gridCols,
+                display: 'grid', gridTemplateColumns: gridCols, minWidth: 520,
                 padding: '14px 24px', borderBottom: '1px solid #1a1a1a',
                 fontFamily: 'var(--font-mono)', fontSize: '0.65rem',
                 color: '#475569', textTransform: 'uppercase', letterSpacing: '0.1em',
@@ -110,7 +110,7 @@ const AIVision = () => {
               {/* Rows */}
               {gridRows.map((row, i) => (
                 <div key={i} style={{
-                  display: 'grid', gridTemplateColumns: gridCols,
+                  display: 'grid', gridTemplateColumns: gridCols, minWidth: 520,
                   padding: '12px 24px', borderBottom: '1px solid #111',
                   alignItems: 'center', transition: 'background 0.2s',
                 }}
@@ -284,7 +284,7 @@ const AIVision = () => {
           </div>
 
           {/* 5. Bottom CTA */}
-          <div style={{
+          <div className="cta-box" style={{
             background: '#0a0a0a', border: '1px solid #1a1a1a',
             borderRadius: 12, padding: '48px 40px',
             display: 'flex', justifyContent: 'space-between', alignItems: 'center',

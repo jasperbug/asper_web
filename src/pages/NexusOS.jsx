@@ -178,13 +178,13 @@ const NexusOS = () => {
               </span>
             </div>
 
-            <div style={{
+            <div className="data-table-wrapper" style={{
               background: '#0a0a0a', border: '1px solid #1a1a1a',
               borderRadius: 12, overflow: 'hidden',
             }}>
               {/* Header */}
               <div style={{
-                display: 'grid', gridTemplateColumns: gridCols,
+                display: 'grid', gridTemplateColumns: gridCols, minWidth: 520,
                 padding: '14px 24px', borderBottom: '1px solid #1a1a1a',
                 fontFamily: 'var(--font-mono)', fontSize: '0.65rem',
                 color: '#475569', textTransform: 'uppercase', letterSpacing: '0.1em',
@@ -199,7 +199,7 @@ const NexusOS = () => {
               {/* Rows */}
               {monitorRows.map((row, i) => (
                 <div key={i} style={{
-                  display: 'grid', gridTemplateColumns: gridCols,
+                  display: 'grid', gridTemplateColumns: gridCols, minWidth: 520,
                   padding: '12px 24px', borderBottom: '1px solid #111',
                   alignItems: 'center', transition: 'background 0.2s',
                 }}
@@ -361,12 +361,12 @@ const NexusOS = () => {
             <h2 style={{ fontSize: '1.3rem', marginBottom: 32, color: '#fff', textAlign: 'center' }}>
               {t('nexus.iot')}
             </h2>
-            <div style={{
+            <div className="iot-flow" style={{
               display: 'flex', alignItems: 'center', justifyContent: 'center',
               gap: 0, flexWrap: 'wrap', padding: '32px 0',
             }}>
               {iotFlow.map((step, i) => (
-                <div key={i} style={{ display: 'flex', alignItems: 'center' }}>
+                <div key={i} style={{ display: 'flex', alignItems: 'center' }} className={i < iotFlow.length - 1 ? 'iot-flow' : ''}>
                   <div style={{
                     display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12,
                     padding: '24px 28px', background: '#0a0a0a', border: '1px solid #1a1a1a',
@@ -379,7 +379,7 @@ const NexusOS = () => {
                     }}>{step.label}</span>
                   </div>
                   {i < iotFlow.length - 1 && (
-                    <div style={{
+                    <div className="iot-connector" style={{
                       width: 40, height: 2,
                       background: 'linear-gradient(90deg, #1a1a1a, #4285F4, #1a1a1a)',
                       margin: '0 -1px',
@@ -395,7 +395,7 @@ const NexusOS = () => {
           </div>
 
           {/* ── 7. Bottom CTA ── */}
-          <div style={{
+          <div className="cta-box" style={{
             background: '#0a0a0a', border: '1px solid #1a1a1a',
             borderRadius: 12, padding: '48px 40px',
             display: 'flex', justifyContent: 'space-between', alignItems: 'center',

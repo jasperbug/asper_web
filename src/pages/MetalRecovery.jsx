@@ -93,7 +93,7 @@ const CarbonFiberRecovery = () => {
           </div>
 
           {/* ── 3. Overview ── */}
-          <div style={{
+          <div className="cta-box" style={{
             marginBottom: 80, background: '#0a0a0a', border: '1px solid #1a1a1a',
             borderRadius: 12, padding: '40px 40px',
           }}>
@@ -184,7 +184,7 @@ const CarbonFiberRecovery = () => {
           </div>
 
           {/* ── 9. Bottom CTA ── */}
-          <div style={{
+          <div className="cta-box" style={{
             background: '#0a0a0a', border: '1px solid #1a1a1a',
             borderRadius: 12, padding: '48px 40px',
             display: 'flex', justifyContent: 'space-between', alignItems: 'center',

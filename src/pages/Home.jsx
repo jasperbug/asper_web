@@ -122,7 +122,7 @@ const Home = () => {
               fontSize: '1.15rem', color: 'rgba(255,255,255,0.75)', maxWidth: 600,
               marginBottom: 40, lineHeight: 1.8,
             }}>{t('hero.subtext')}</p>
-            <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
+            <div className="hero-buttons" style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
               <Link to="/ai-vision" className="btn-primary">
                 {t('hero.cta1')} <ArrowRight size={16} />
               </Link>
@@ -133,7 +133,7 @@ const Home = () => {
           </div>
 
           {/* Stats row */}
-          <div style={{
+          <div className="hero-stats" style={{
             display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
             gap: 32, marginTop: 100, paddingTop: 48,
             borderTop: '1px solid rgba(255,255,255,0.15)',
