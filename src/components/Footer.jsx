@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Github, Linkedin, Twitter } from 'lucide-react';
+import { Linkedin } from 'lucide-react';
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -26,14 +26,18 @@ const Footer = () => {
               {t('footer.companyDesc')}
             </p>
             <div style={{ display: 'flex', gap: 16, marginTop: 20 }}>
-              {[Github, Linkedin, Twitter].map((Icon, i) => (
-                <a key={i} href="#" style={{
-                  color: '#475569', transition: 'color 0.2s',
-                }} onMouseOver={e => e.currentTarget.style.color = '#4285F4'}
-                  onMouseOut={e => e.currentTarget.style.color = '#475569'}>
-                  <Icon size={18} />
-                </a>
-              ))}
+              <a href="#" style={{ color: '#475569', transition: 'color 0.2s' }}
+                onMouseOver={e => e.currentTarget.style.color = '#4285F4'}
+                onMouseOut={e => e.currentTarget.style.color = '#475569'}>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+              </a>
+              <a href="#" style={{ color: '#475569', transition: 'color 0.2s' }}
+                onMouseOver={e => e.currentTarget.style.color = '#4285F4'}
+                onMouseOut={e => e.currentTarget.style.color = '#475569'}>
+                <Linkedin size={18} />
+              </a>
             </div>
           </div>
 
@@ -65,9 +69,9 @@ const Footer = () => {
               textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 20,
             }}>{t('footer.contact')}</h4>
             <p style={{ color: '#475569', fontSize: '0.875rem', lineHeight: 2 }}>
-              contact@asper.international<br />
-              Taipei, Taiwan<br />
-              +886-2-XXXX-XXXX
+              d@aspertw.com<br />
+              Taoyuan, Taiwan<br />
+              +886-3-385-9800
             </p>
           </div>
         </div>
