@@ -73,7 +73,7 @@ const VideoHero = ({ children }) => {
         position: 'relative',
         zIndex: 2,
         width: '100%',
-        paddingTop: 64,
+        paddingTop: 120,
       }}>
         {children}
       </div>
