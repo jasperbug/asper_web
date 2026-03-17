@@ -8,6 +8,7 @@ import NexusOS from './pages/NexusOS';
 import SupplyChain from './pages/SupplyChain';
 import MetalRecovery from './pages/MetalRecovery';
 import Partners from './pages/Partners';
+import SharePage from './SharePage';
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
           <Route path="/supply-chain" element={<SupplyChain />} />
           <Route path="/metal-recovery" element={<MetalRecovery />} />
           <Route path="/partners" element={<Partners />} />
+          <Route path="/share/space/:id" element={<SharePage type="space" />} />
+          <Route path="/share/beautician/:id" element={<SharePage type="beautician" />} />
         </Routes>
       </main>
       <Footer />
